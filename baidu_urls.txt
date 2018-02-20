@@ -1,2 +1,3 @@
+https://tcsds.github.io/2018/02/20/JupyterNotebook小技巧_Interact/
 https://tcsds.github.io/2017/07/27/科研项目技术路线图绘制方法/
 https://tcsds.github.io/2017/07/26/新一代人工智能发展规划/

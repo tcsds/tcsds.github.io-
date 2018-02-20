@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="tc9oC43pCp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Jupyter Notebook,Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="interact 函数来自于 (ipywidgets.interact)，能够自动创建交互界面 123from __future__ import print_functionfrom ipywidgets import interact, interactive, fixed, interact_manualimport ipywidgets as widgets  基本用法 使用interac">
+<meta name="keywords" content="Jupyter Notebook,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JupyterNotebook小技巧_Interact">
+<meta property="og:url" content="https://tcsds.github.io/2018/02/20/JupyterNotebook小技巧_Interact/index.html">
+<meta property="og:site_name" content="DS小站">
+<meta property="og:description" content="interact 函数来自于 (ipywidgets.interact)，能够自动创建交互界面 123from __future__ import print_functionfrom ipywidgets import interact, interactive, fixed, interact_manualimport ipywidgets as widgets  基本用法 使用interac">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-20T15:07:52.117Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JupyterNotebook小技巧_Interact">
+<meta name="twitter:description" content="interact 函数来自于 (ipywidgets.interact)，能够自动创建交互界面 123from __future__ import print_functionfrom ipywidgets import interact, interactive, fixed, interact_manualimport ipywidgets as widgets  基本用法 使用interac">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tcsds.github.io/2018/02/20/JupyterNotebook小技巧_Interact/"/>
+
+
+
+
+
+  <title>JupyterNotebook小技巧_Interact | DS小站</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-103389953-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8d2cf6c30b729f709d0f93256321d2d4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <meta name="baidu-site-verification" content="wBFBz8oezD" />
+	
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DS小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">数据科学</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://tcsds.github.io/2018/02/20/JupyterNotebook小技巧_Interact/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="善良的右行">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DS小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JupyterNotebook小技巧_Interact</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-20T19:16:56+08:00">
+                2018-02-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程技巧/" itemprop="url" rel="index">
+                    <span itemprop="name">编程技巧</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/20/JupyterNotebook小技巧_Interact/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/20/JupyterNotebook小技巧_Interact/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/02/20/JupyterNotebook小技巧_Interact/" class="leancloud_visitors" data-flag-title="JupyterNotebook小技巧_Interact">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>interact 函数来自于 (ipywidgets.interact)，能够自动创建交互界面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</div><div class="line"><span class="keyword">from</span> ipywidgets <span class="keyword">import</span> interact, interactive, fixed, interact_manual</div><div class="line"><span class="keyword">import</span> ipywidgets <span class="keyword">as</span> widgets</div></pre></td></tr></table></figure>
+<h2 id="基本用法"><a class="markdownIt-Anchor" href="#基本用法"></a> 基本用法</h2>
+<p>使用interact控制函数的参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x)</span>:</span></div><div class="line">    <span class="keyword">return</span> x</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">使用interact之后，等于是把所定义的函数作为第一个参数传递给了interact</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=<span class="number">10</span>);</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<p>如果只输入True或者False，则会生成一个复选框</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=<span class="keyword">True</span>)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<pre><code>&lt;function __main__.f&gt;
+</code></pre>
+<p>如果你输入一个字符串，则会生成一个文本框</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=<span class="string">'Hi there!'</span>);</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<p>interact也可发作为装饰器使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@interact(x=True, y=1.0)</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">g</span><span class="params">(x, y)</span>:</span></div><div class="line">    <span class="keyword">return</span>(x, y)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="使用fixed固定参数"><a class="markdownIt-Anchor" href="#使用fixed固定参数"></a> 使用<strong>fixed</strong>固定参数</h2>
+<p>在调用<strong>interact</strong>时，通过<strong>fixed</strong>向函数传递固定值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">h</span><span class="params">(p, q)</span>:</span></div><div class="line">    <span class="keyword">return</span> (p, q)</div><div class="line"></div><div class="line">interact(h, p=<span class="number">5</span>, q=fixed(<span class="number">20</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="缩写控件"><a class="markdownIt-Anchor" href="#缩写控件"></a> 缩写控件</h2>
+<p>若向interact中传播整数关键参数10（x=10)，它通常会产生一个整数值滑块，该滑块的取值范围为[-10, +3*10]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">widgets.IntSlider(min=<span class="number">-10</span>,max=<span class="number">30</span>,step=<span class="number">1</span>,value=<span class="number">10</span>)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>IntSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<p>上面所演示的命令也可以通过向interact传递InSlider来实现</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x = widgets.IntSlider(min=<span class="number">-10</span>,max=<span class="number">30</span>,step=<span class="number">1</span>,value=<span class="number">10</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a = widgets.IntSlider(min=<span class="number">-10</span>,max=<span class="number">30</span>,step=<span class="number">1</span>,value=<span class="number">10</span>)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这个例子表明了<strong>interact</strong>函数的处理关键字参数的方式：</p>
+</blockquote>
+<ol>
+<li>如果关键字参数是一个以<strong>value</strong>为属性的<strong>Widget</strong>实例，这个控制就可以实现，任何以<strong>value</strong>属性值的控件都能够使用。</li>
+<li>在使用<strong>value</strong>之前，该值首先会被视为缩写控件。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">关键字参数</th>
+<th style="text-align:center">控件类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>True</strong> 或者<strong>False</strong></td>
+<td style="text-align:center">复选框(Checkbox)</td>
+</tr>
+<tr>
+<td style="text-align:left">字符串</td>
+<td style="text-align:center">文本</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>整数型integers</strong>value or (min,max) or (min,max,step)</td>
+<td style="text-align:center">整数型滑块(IntSlider)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>浮点型float</strong>value or (min,max) or (min,max,step)</td>
+<td style="text-align:center">浮点型滑块(FloatSlider)</td>
+</tr>
+<tr>
+<td style="text-align:left">列表或字典</td>
+<td style="text-align:center">下拉框</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=(<span class="number">0.0</span>,<span class="number">10.0</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#可以设定一个初始值</span></div><div class="line"><span class="meta">@interact(x=(0.0,20.0,0.5))</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">h</span><span class="params">(x=<span class="number">5.5</span>)</span>:</span></div><div class="line">    <span class="keyword">return</span> x</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=[<span class="string">'apples'</span>,<span class="string">'oranges'</span>]);</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(f, x=&#123;<span class="string">'one'</span>: <span class="number">10</span>, <span class="string">'two'</span>: <span class="number">20</span>&#125;);</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="interactive"><a class="markdownIt-Anchor" href="#interactive"></a> interactive</h2>
+<p>除了<strong>interact</strong>，Ipython还提供了其他参数<strong>interactive</strong>,这对于UI控制是极为方便的。</p>
+<blockquote>
+<p>注意，不像<strong>interact</strong>，函数值不会自动的出现，必须通过调用<strong>IPython.display.display</strong>才能实现。</p>
+</blockquote>
+<p>定义一个求和函数，如果不想显示结果，可以省略显示行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> display</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(a, b)</span>:</span></div><div class="line">    display(a + b)</div><div class="line">    <span class="keyword">return</span> a+b</div></pre></td></tr></table></figure>
+<p>不像interact，<strong>interactive</strong>返回一个<strong>Widget</strong>对象实例，而非立刻显示控件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">w = interactive(f, a=<span class="number">10</span>, b=<span class="number">20</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">type(w)</div></pre></td></tr></table></figure>
+<pre><code>ipywidgets.widgets.interaction.interactive
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">w.children</div></pre></td></tr></table></figure>
+<pre><code>(IntSlider(value=10, description='a', max=30, min=-10),
+ IntSlider(value=20, description='b', max=60, min=-20),
+ Output())
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">display(w)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">w.kwargs</div></pre></td></tr></table></figure>
+<pre><code>{'a': 10, 'b': 20}
+</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">w.result</div></pre></td></tr></table></figure>
+<pre><code>30
+</code></pre>
+<h2 id="禁止持续更新"><a class="markdownIt-Anchor" href="#禁止持续更新"></a> 禁止持续更新</h2>
+<p>长时间运行函数时，实时反馈是不利的，如下所示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">slow_function</span><span class="params">(i)</span>:</span></div><div class="line">    print(int(i),list(x <span class="keyword">for</span> x <span class="keyword">in</span> range(int(i)) <span class="keyword">if</span></div><div class="line">                str(x)==str(x)[::<span class="number">-1</span>] <span class="keyword">and</span></div><div class="line">                str(x**<span class="number">2</span>)==str(x**<span class="number">2</span>)[::<span class="number">-1</span>]))</div><div class="line">    <span class="keyword">return</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">%%time</div><div class="line"></div><div class="line">slow_function(<span class="number">1e6</span>)</div></pre></td></tr></table></figure>
+<pre><code>1000000 [0, 1, 2, 3, 11, 22, 101, 111, 121, 202, 212, 1001, 1111, 2002, 10001, 10101, 10201, 11011, 11111, 11211, 20002, 20102, 100001, 101101, 110011, 111111, 200002]
+Wall time: 846 ms
+</code></pre>
+<blockquote>
+<p>注意，当鼠标点击滑块时，输出结果是持续更新的，这对于函数运行和debug是不利的：</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> ipywidgets <span class="keyword">import</span> FloatSlider</div><div class="line">interact(slow_function,i=FloatSlider(min=<span class="number">1e5</span>, max=<span class="number">1e7</span>, step=<span class="number">1e5</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<blockquote>
+<p>有2种方式可以避免</p>
+</blockquote>
+<h3 id="interact_manual"><a class="markdownIt-Anchor" href="#interact_manual"></a> interact_manual</h3>
+<blockquote>
+<p>该函数提供了多样化的交互方式，允许限制在期望的情况下才执行。在这种情况下，会出现一个按钮，只有点击之后才触发执行事件。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact_manual(slow_function, i = FloatSlider(min=<span class="number">1e5</span>, max=<span class="number">1e7</span>, step=<span class="number">1e5</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="continuous_update"><a class="markdownIt-Anchor" href="#continuous_update"></a> continuous_update</h3>
+<p>如果使用滑块控件，可以把<strong>continuous_update <strong>设置为</strong>False</strong>,这样，当鼠标拉动滑块时，并不触发事件，只有当鼠标停止不动时，都会触发事件并计算和输出结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">interact(slow_function,i=FloatSlider(min=<span class="number">1e5</span>, max=<span class="number">1e7</span>, step=<span class="number">1e5</span>, continuous_update=<span class="keyword">False</span>));</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="interactive_output"><a class="markdownIt-Anchor" href="#interactive_output"></a> interactive_output</h3>
+<p>该函数并不生成交互界面，但是能够生成一个控件，并把内容传递给interactive_output，同时控制控件和布局。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">a = widgets.IntSlider()</div><div class="line">b = widgets.IntSlider()</div><div class="line">c = widgets.IntSlider()</div><div class="line">ui = widgets.HBox([a, b, c])</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(a, b, c)</span>:</span></div><div class="line">    print((a, b, c))</div><div class="line"></div><div class="line">out = widgets.interactive_output(f, &#123;<span class="string">'a'</span>: a, <span class="string">'b'</span>: b, <span class="string">'c'</span>: c&#125;)</div><div class="line"></div><div class="line">display(ui, out)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<p>Failed to display Jupyter Widget of type <code>Output</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="互相依赖的参数"><a class="markdownIt-Anchor" href="#互相依赖的参数"></a> 互相依赖的参数</h2>
+<p>使用<strong>observe</strong>可以产生互相依赖的参数，如下所示，一个变量对另外的变量进行了描述。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">x_widget = FloatSlider(min=<span class="number">0.0</span>, max=<span class="number">10.0</span>, step=<span class="number">0.05</span>)</div><div class="line">y_widget = FloatSlider(min=<span class="number">0.5</span>, max=<span class="number">10.0</span>, step=<span class="number">0.05</span>, value=<span class="number">5.0</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_x_range</span><span class="params">(*args)</span>:</span></div><div class="line">    x_widget.max = <span class="number">2.0</span> * y_widget.value</div><div class="line">y_widget.observe(update_x_range, <span class="string">'value'</span>)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">printer</span><span class="params">(x, y)</span>:</span></div><div class="line">    print(x, y)</div><div class="line">interact(printer,x=x_widget, y=y_widget);</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="间断和跳跃输出"><a class="markdownIt-Anchor" href="#间断和跳跃输出"></a> 间断和跳跃输出</h2>
+<p>有时，通过间断和跳跃性的交互输出，可以使笔记本的位置随输出结果的更新而变化。这种交互控制有一个准则，可以设置它的高度为一个近似值，这样，图片的大小不会因为结果而发生变化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">%matplotlib inline</div><div class="line"><span class="keyword">from</span> ipywidgets <span class="keyword">import</span> interactive</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(m, b)</span>:</span></div><div class="line">    plt.figure(<span class="number">2</span>)</div><div class="line">    x = np.linspace(<span class="number">-10</span>, <span class="number">10</span>, num=<span class="number">1000</span>)</div><div class="line">    plt.plot(x, m * x + b)</div><div class="line">    plt.ylim(<span class="number">-5</span>, <span class="number">5</span>)</div><div class="line">    plt.show()</div><div class="line"></div><div class="line">interactive_plot = interactive(f, m=(<span class="number">-2.0</span>, <span class="number">2.0</span>), b=(<span class="number">-3</span>, <span class="number">3</span>, <span class="number">0.5</span>))</div><div class="line">output = interactive_plot.children[<span class="number">-1</span>]</div><div class="line">output.layout.height = <span class="string">'350px'</span></div><div class="line">interactive_plot</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>interactive</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>大爷，赏个铜板啊~~~</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.png" alt="善良的右行 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Jupyter-Notebook/" rel="tag"># Jupyter Notebook</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/科研项目技术路线图绘制方法/" rel="next" title="科研项目技术路线图绘制方法">
+                <i class="fa fa-chevron-left"></i> 科研项目技术路线图绘制方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?'];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/touxiang.png"
+               alt="善良的右行" />
+          <p class="site-author-name" itemprop="name">善良的右行</p>
+           
+              <p class="site-description motion-element" itemprop="description">奋斗在数据科学的海洋中~~~</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tcsds" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1285456292" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本用法"><span class="nav-number">1.</span> <span class="nav-text"> 基本用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用fixed固定参数"><span class="nav-number">2.</span> <span class="nav-text"> 使用fixed固定参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缩写控件"><span class="nav-number">3.</span> <span class="nav-text"> 缩写控件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#interactive"><span class="nav-number">4.</span> <span class="nav-text"> interactive</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#禁止持续更新"><span class="nav-number">5.</span> <span class="nav-text"> 禁止持续更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#interact_manual"><span class="nav-number">5.1.</span> <span class="nav-text"> interact_manual</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous_update"><span class="nav-number">5.2.</span> <span class="nav-text"> continuous_update</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#interactive_output"><span class="nav-number">5.3.</span> <span class="nav-text"> interactive_output</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互相依赖的参数"><span class="nav-number">6.</span> <span class="nav-text"> 互相依赖的参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#间断和跳跃输出"><span class="nav-number">7.</span> <span class="nav-text"> 间断和跳跃输出</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">善良的右行</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://tcsds.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://tcsds.github.io/2018/02/20/JupyterNotebook小技巧_Interact/';
+          this.page.identifier = '2018/02/20/JupyterNotebook小技巧_Interact/';
+          this.page.title = 'JupyterNotebook小技巧_Interact';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://tcsds.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("EYRPvu8Foi70qSt1y7OdXfQA-gzGzoHsz", "LtAiueqnI6ktPOyLVaXWPHR0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
