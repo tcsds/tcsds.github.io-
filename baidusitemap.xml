@@ -4,11 +4,55 @@
 
     
   <url>
-    <loc>https://tcsds.github.io/2018/02/20/JupyterNotebook%E5%B0%8F%E6%8A%80%E5%B7%A7_Interact/</loc>
-    <lastmod>2018-02-20T15:07:52.117Z</lastmod>
+    <loc>https://tcsds.github.io/2018/02/21/JupyterNotebook_%E6%8E%A7%E4%BB%B6%E5%AF%BC%E8%AE%BA/</loc>
+    <lastmod>2018-02-21T07:54:50.462Z</lastmod>
     <data>
         <display>
-        <title>JupyterNotebook小技巧_Interact</title>
+        <title>JupyterNotebook_控件导论</title>
+        <pubTime>2018-02-21T03:42:39.523Z</pubTime>
+        
+        <tag>Jupyter Notebook</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程工具" url="https://tcsds.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tcsds.github.io/2018/02/21/JupyterNotebook_%E6%8E%A7%E4%BB%B6%E5%88%97%E8%A1%A8/</loc>
+    <lastmod>2018-02-21T07:54:18.951Z</lastmod>
+    <data>
+        <display>
+        <title>JupyterNotebook_控件列表</title>
+        <pubTime>2018-02-21T07:50:32.387Z</pubTime>
+        
+        <tag>Jupyter Notebook</tag>
+         
+        <tag>Python</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程工具" url="https://tcsds.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://tcsds.github.io/2018/02/20/JupyterNotebook_Interact/</loc>
+    <lastmod>2018-02-21T03:46:39.671Z</lastmod>
+    <data>
+        <display>
+        <title>JupyterNotebook_Interact</title>
         <pubTime>2018-02-20T11:16:56.898Z</pubTime>
         
         <tag>Jupyter Notebook</tag>
@@ -18,7 +62,7 @@
          
            
              
-              <breadCrumb title="编程技巧" url="https://tcsds.github.io/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/"/>
+              <breadCrumb title="编程工具" url="https://tcsds.github.io/categories/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>

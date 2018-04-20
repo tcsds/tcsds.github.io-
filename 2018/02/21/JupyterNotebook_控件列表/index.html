@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="tc9oC43pCp" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Jupyter Notebook,Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="1import ipywidgets as widgets  数值型控件Numeric widgets Ipython中有10个控件来显示数值。这些控件查找起来也很方便，都是以相应的数值型字符+控件名称命令的。  整数型IntSlider 123456789101112widgets.IntSlider(    value=7,    min=0,    max=10,    step=1,">
+<meta name="keywords" content="Jupyter Notebook,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JupyterNotebook_控件列表">
+<meta property="og:url" content="https://tcsds.github.io/2018/02/21/JupyterNotebook_控件列表/index.html">
+<meta property="og:site_name" content="DS小站">
+<meta property="og:description" content="1import ipywidgets as widgets  数值型控件Numeric widgets Ipython中有10个控件来显示数值。这些控件查找起来也很方便，都是以相应的数值型字符+控件名称命令的。  整数型IntSlider 123456789101112widgets.IntSlider(    value=7,    min=0,    max=10,    step=1,">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-21T07:54:18.951Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JupyterNotebook_控件列表">
+<meta name="twitter:description" content="1import ipywidgets as widgets  数值型控件Numeric widgets Ipython中有10个控件来显示数值。这些控件查找起来也很方便，都是以相应的数值型字符+控件名称命令的。  整数型IntSlider 123456789101112widgets.IntSlider(    value=7,    min=0,    max=10,    step=1,">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://tcsds.github.io/2018/02/21/JupyterNotebook_控件列表/"/>
+
+
+
+
+
+  <title>JupyterNotebook_控件列表 | DS小站</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-103389953-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?8d2cf6c30b729f709d0f93256321d2d4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+  
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <meta name="baidu-site-verification" content="wBFBz8oezD" />
+	
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DS小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">数据科学</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://tcsds.github.io/2018/02/21/JupyterNotebook_控件列表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="善良的右行">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DS小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JupyterNotebook_控件列表</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-21T15:50:32+08:00">
+                2018-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程工具/" itemprop="url" rel="index">
+                    <span itemprop="name">编程工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/02/21/JupyterNotebook_控件列表/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/02/21/JupyterNotebook_控件列表/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/02/21/JupyterNotebook_控件列表/" class="leancloud_visitors" data-flag-title="JupyterNotebook_控件列表">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> ipywidgets <span class="keyword">as</span> widgets</div></pre></td></tr></table></figure>
+<h2 id="数值型控件numeric-widgets"><a class="markdownIt-Anchor" href="#数值型控件numeric-widgets"></a> 数值型控件Numeric widgets</h2>
+<p>Ipython中有10个控件来显示数值。这些控件查找起来也很方便，都是以相应的数值型字符+控件名称命令的。</p>
+<h3 id="整数型intslider"><a class="markdownIt-Anchor" href="#整数型intslider"></a> 整数型IntSlider</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">widgets.IntSlider(</div><div class="line">    value=<span class="number">7</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10</span>,</div><div class="line">    step=<span class="number">1</span>,</div><div class="line">    description=<span class="string">'Test:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span>,</div><div class="line">    readout=<span class="keyword">True</span>,</div><div class="line">    readout_format=<span class="string">'d'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>IntSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="浮点型floatslider"><a class="markdownIt-Anchor" href="#浮点型floatslider"></a> 浮点型FloatSlider</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">widgets.FloatSlider(</div><div class="line">    value=<span class="number">7.5</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10.0</span>,</div><div class="line">    step=<span class="number">0.1</span>,</div><div class="line">    description=<span class="string">'Test:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span>,</div><div class="line">    readout=<span class="keyword">True</span>,</div><div class="line">    readout_format=<span class="string">'.1f'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>FloatSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<blockquote>
+<p>也可以改变滑块的方向</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">widgets.FloatSlider(</div><div class="line">    value=<span class="number">7.5</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10.0</span>,</div><div class="line">    step=<span class="number">0.1</span>,</div><div class="line">    description=<span class="string">'Test:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'vertical'</span>,</div><div class="line">    readout=<span class="keyword">True</span>,</div><div class="line">    readout_format=<span class="string">'.1f'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>FloatSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="整数区间型intrangeslider"><a class="markdownIt-Anchor" href="#整数区间型intrangeslider"></a> 整数区间型IntRangeSlider</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">widgets.IntRangeSlider(</div><div class="line">    value=[<span class="number">5</span>, <span class="number">7</span>],</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10</span>,</div><div class="line">    step=<span class="number">1</span>,</div><div class="line">    description=<span class="string">'Test:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span>,</div><div class="line">    readout=<span class="keyword">True</span>,</div><div class="line">    readout_format=<span class="string">'d'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<h3 id="浮点数区间型intrangeslider"><a class="markdownIt-Anchor" href="#浮点数区间型intrangeslider"></a> 浮点数区间型IntRangeSlider</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">widgets.FloatRangeSlider(</div><div class="line">    value=[<span class="number">5</span>, <span class="number">7.5</span>],</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10.0</span>,</div><div class="line">    step=<span class="number">0.1</span>,</div><div class="line">    description=<span class="string">'Test:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span>,</div><div class="line">    readout=<span class="keyword">True</span>,</div><div class="line">    readout_format=<span class="string">'.1f'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>FloatRangeSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="整数进度条intprogress"><a class="markdownIt-Anchor" href="#整数进度条intprogress"></a> 整数进度条IntProgress</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">widgets.IntProgress(</div><div class="line">    value=<span class="number">7</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10</span>,</div><div class="line">    step=<span class="number">1</span>,</div><div class="line">    description=<span class="string">'Loading:'</span>,</div><div class="line">    bar_style=<span class="string">''</span>, <span class="comment"># 'success', 'info', 'warning', 'danger' or ''</span></div><div class="line">    orientation=<span class="string">'horizontal'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>IntProgress</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="浮点数进度条intprogress"><a class="markdownIt-Anchor" href="#浮点数进度条intprogress"></a> 浮点数进度条IntProgress</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">widgets.FloatProgress(</div><div class="line">    value=<span class="number">7.5</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10.0</span>,</div><div class="line">    step=<span class="number">0.1</span>,</div><div class="line">    description=<span class="string">'Loading:'</span>,</div><div class="line">    bar_style=<span class="string">'info'</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>FloatProgress</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<blockquote>
+<p><strong>数值型文本框受在数据方面受到一定的限制（范围，只能输入整数）</strong></p>
+</blockquote>
+<h3 id="有限整数型文本框boundedinttext"><a class="markdownIt-Anchor" href="#有限整数型文本框boundedinttext"></a> 有限整数型文本框BoundedIntText</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">widgets.BoundedIntText(</div><div class="line">    value=<span class="number">7</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10</span>,</div><div class="line">    step=<span class="number">1</span>,</div><div class="line">    description=<span class="string">'Text:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>BoundedIntText</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="有限浮点数型文本框boundedfloattext"><a class="markdownIt-Anchor" href="#有限浮点数型文本框boundedfloattext"></a> 有限浮点数型文本框BoundedFloatText</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">widgets.BoundedFloatText(</div><div class="line">    value=<span class="number">7.5</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">10.0</span>,</div><div class="line">    step=<span class="number">0.1</span>,</div><div class="line">    description=<span class="string">'Text:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>BoundedFloatText</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="整数型文本框inttext"><a class="markdownIt-Anchor" href="#整数型文本框inttext"></a> 整数型文本框IntText</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.IntText(</div><div class="line">    value=<span class="number">7</span>,</div><div class="line">    description=<span class="string">'Any:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>IntText</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="浮点数型文本框floattext"><a class="markdownIt-Anchor" href="#浮点数型文本框floattext"></a> 浮点数型文本框FloatText</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.FloatText(</div><div class="line">    value=<span class="number">7.5</span>,</div><div class="line">    description=<span class="string">'Any:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>FloatText</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="布尔控件boolean-widgets"><a class="markdownIt-Anchor" href="#布尔控件boolean-widgets"></a> 布尔控件Boolean widgets</h2>
+<blockquote>
+<p>有3类布尔控件</p>
+</blockquote>
+<h3 id="开关按钮togglebutton"><a class="markdownIt-Anchor" href="#开关按钮togglebutton"></a> 开关按钮ToggleButton</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">widgets.ToggleButton(</div><div class="line">    value=<span class="keyword">False</span>,</div><div class="line">    description=<span class="string">'Click me'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    button_style=<span class="string">''</span>, <span class="comment"># 'success', 'info', 'warning', 'danger' or ''</span></div><div class="line">    tooltip=<span class="string">'Description'</span>,</div><div class="line">    icon=<span class="string">'check'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>ToggleButton</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="复选框checkbox"><a class="markdownIt-Anchor" href="#复选框checkbox"></a> 复选框Checkbox</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.Checkbox(</div><div class="line">    value=<span class="keyword">False</span>,</div><div class="line">    description=<span class="string">'Check me'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Checkbox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="只读型验证控件valid"><a class="markdownIt-Anchor" href="#只读型验证控件valid"></a> 只读型验证控件Valid</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">widgets.Valid(</div><div class="line">    value=<span class="keyword">False</span>,</div><div class="line">    description=<span class="string">'Valid!'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Valid</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="选择型控件selection-widgets"><a class="markdownIt-Anchor" href="#选择型控件selection-widgets"></a> 选择型控件Selection widgets</h2>
+<p>选择型控件有很多，有<strong>2</strong>个可以用来选择多个值。<br>
+可以通过传递列表的方式实现多个可选值。<br>
+通过调用<strong>str</strong>的形式通过标签调用单个值，或是成对的标签、值</p>
+<h3 id="下拉框dropdown"><a class="markdownIt-Anchor" href="#下拉框dropdown"></a> 下拉框Dropdown</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">widgets.Dropdown(</div><div class="line">    options=[<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>],</div><div class="line">    value=<span class="string">'2'</span>,</div><div class="line">    describtion=<span class="string">'Number:'</span>,</div><div class="line">    disable=<span class="keyword">False</span></div><div class="line">                )</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Dropdown</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<blockquote>
+<p>也可以实现只读性验证</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.Dropdown(</div><div class="line">    options=&#123;<span class="string">'One'</span>: <span class="number">1</span>, <span class="string">'Two'</span>: <span class="number">2</span>, <span class="string">'Three'</span>: <span class="number">3</span>&#125;,</div><div class="line">    value=<span class="number">2</span>,</div><div class="line">    description=<span class="string">'Number:'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Dropdown</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="标识性按钮radiobuttons"><a class="markdownIt-Anchor" href="#标识性按钮radiobuttons"></a> 标识性按钮RadioButtons</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">widgets.RadioButtons(</div><div class="line">    options=[<span class="string">'pepperoni'</span>, <span class="string">'pineapple'</span>, <span class="string">'anchovies'</span>],</div><div class="line"><span class="comment">#     value='pineapple',</span></div><div class="line">    description=<span class="string">'Pizza topping:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>RadioButtons</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="选择性框架select"><a class="markdownIt-Anchor" href="#选择性框架select"></a> 选择性框架Select</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">widgets.Select(</div><div class="line">    options=[<span class="string">'Linux'</span>, <span class="string">'Windows'</span>, <span class="string">'OSX'</span>],</div><div class="line">    value=<span class="string">'OSX'</span>,</div><div class="line">    <span class="comment"># rows=10,</span></div><div class="line">    description=<span class="string">'OS:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Select</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="选择型滑块selectionslider"><a class="markdownIt-Anchor" href="#选择型滑块selectionslider"></a> 选择型滑块SelectionSlider</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">widgets.SelectionSlider(</div><div class="line">    options=[<span class="string">'scrambled'</span>, <span class="string">'sunny side up'</span>, <span class="string">'poached'</span>, <span class="string">'over easy'</span>],</div><div class="line">    value=<span class="string">'sunny side up'</span>,</div><div class="line">    description=<span class="string">'I like my eggs ...'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    continuous_update=<span class="keyword">False</span>,</div><div class="line">    orientation=<span class="string">'horizontal'</span>,</div><div class="line">    readout=<span class="keyword">True</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>SelectionSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="选择范围型滑块selectionrangeslider"><a class="markdownIt-Anchor" href="#选择范围型滑块selectionrangeslider"></a> 选择范围型滑块SelectionRangeSlider</h3>
+<p>值、索引和标签关键字是一个由可选的最大最小值2-元组构成，并且不能为空。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> datetime</div><div class="line">dates = [datetime.date(<span class="number">2015</span>,i,<span class="number">1</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">13</span>)]</div><div class="line">options = [(i.strftime(<span class="string">'%b'</span>), i) <span class="keyword">for</span> i <span class="keyword">in</span> dates]</div><div class="line">widgets.SelectionRangeSlider(</div><div class="line">    options=options,</div><div class="line">    index=(<span class="number">0</span>,<span class="number">11</span>),</div><div class="line">    description=<span class="string">'Months (2015)'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>SelectionRangeSlider</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="触发器按钮togglebuttons"><a class="markdownIt-Anchor" href="#触发器按钮togglebuttons"></a> 触发器按钮ToggleButtons</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">widgets.ToggleButtons(</div><div class="line">    options=[<span class="string">'Slow'</span>, <span class="string">'Regular'</span>, <span class="string">'Fast'</span>],</div><div class="line">    description=<span class="string">'Speed:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    button_style=<span class="string">''</span>, <span class="comment"># 'success', 'info', 'warning', 'danger' or ''</span></div><div class="line">    tooltips=[<span class="string">'Description of slow'</span>, <span class="string">'Description of regular'</span>, <span class="string">'Description of fast'</span>],</div><div class="line"><span class="comment">#     icons=['check'] * 3</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>ToggleButtons</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="多重可选控件"><a class="markdownIt-Anchor" href="#多重可选控件"></a> 多重可选控件</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">widgets.SelectMultiple(</div><div class="line">    options=[<span class="string">'Apples'</span>, <span class="string">'Oranges'</span>, <span class="string">'Pears'</span>],</div><div class="line">    value=[<span class="string">'Oranges'</span>],</div><div class="line">    <span class="comment">#rows=10,</span></div><div class="line">    description=<span class="string">'Fruits'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>SelectMultiple</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="字符控件string-widgets"><a class="markdownIt-Anchor" href="#字符控件string-widgets"></a> 字符控件String widgets</h2>
+<p><strong>Text</strong>和<strong>Textare</strong>控件接收输入，<strong>HTML</strong>和<strong>HTMLMath</strong>控件把字符显示为HTML。<strong>Lable</strong>控件可以用来构建典型的控制标签</p>
+<h3 id="文本型text"><a class="markdownIt-Anchor" href="#文本型text"></a> 文本型Text</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">widgets.Text(</div><div class="line">    value=<span class="string">'Hello World'</span>,</div><div class="line">    placeholder=<span class="string">'Type something'</span>,</div><div class="line">    description=<span class="string">'String:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Text</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="文本域型textarea"><a class="markdownIt-Anchor" href="#文本域型textarea"></a> 文本域型Textarea</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">widgets.Textarea(</div><div class="line">    value=<span class="string">'Hello World'</span>,</div><div class="line">    placeholder=<span class="string">'Type something'</span>,</div><div class="line">    description=<span class="string">'String:'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Textarea</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="标签label"><a class="markdownIt-Anchor" href="#标签label"></a> 标签Label</h3>
+<p><strong>Label</strong>能够实现内置型的控制描述</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">widgets.HBox([widgets.Label(value=<span class="string">"The $m$ in $E=mc^2$:"</span>), widgets.FloatSlider()])</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="html"><a class="markdownIt-Anchor" href="#html"></a> HTML</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.HTML(</div><div class="line">    value=<span class="string">"Hello &lt;b&gt;World&lt;/b&gt;"</span>,</div><div class="line">    placeholder=<span class="string">'Some HTML'</span>,</div><div class="line">    description=<span class="string">'Some HTML'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HTML</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="html-math"><a class="markdownIt-Anchor" href="#html-math"></a> HTML Math</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">widgets.HTMLMath(</div><div class="line">    value=<span class="string">r"Some math and &lt;i&gt;HTML&lt;/i&gt;: \(x^2\) and $$\frac&#123;x+1&#125;&#123;x-1&#125;$$"</span>,</div><div class="line">    placeholder=<span class="string">'Some HTML'</span>,</div><div class="line">    description=<span class="string">'Some HTML'</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HTMLMath</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="图片image"><a class="markdownIt-Anchor" href="#图片image"></a> 图片Image</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">file = open(<span class="string">"image.png"</span>, <span class="string">"rb"</span>)</div><div class="line">image = file.read()</div><div class="line">widgets.Image(</div><div class="line">    value=image,</div><div class="line">    format=<span class="string">'png'</span>,</div><div class="line">    width=<span class="number">300</span>,</div><div class="line">    height=<span class="number">400</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Image</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="按钮button"><a class="markdownIt-Anchor" href="#按钮button"></a> 按钮Button</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">widgets.Button(</div><div class="line">    description=<span class="string">'Click me'</span>,</div><div class="line">    disabled=<span class="keyword">False</span>,</div><div class="line">    button_style=<span class="string">''</span>, <span class="comment"># 'success', 'info', 'warning', 'danger' or ''</span></div><div class="line">    tooltip=<span class="string">'Click me'</span>,</div><div class="line">    icon=<span class="string">'check'</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Button</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="输出output"><a class="markdownIt-Anchor" href="#输出output"></a> 输出Output</h2>
+<p><strong>Output</strong>控件能够捕捉或显示标准输出、标准错误或Ipythonk生成的丰富内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">out = widgets.Output()</div><div class="line">out</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Output</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> out:</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</div><div class="line">        print(i, <span class="string">'Hello world!'</span>)</div></pre></td></tr></table></figure>
+<p>可能够输出其他富文本内容</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> YouTubeVideo</div><div class="line"><span class="keyword">with</span> out:</div><div class="line">    display(YouTubeVideo(<span class="string">'eWzY2nGfkXk'</span>))</div></pre></td></tr></table></figure>
+<h2 id="播放动画控件play-animation-widget"><a class="markdownIt-Anchor" href="#播放动画控件play-animation-widget"></a> 播放（动画）控件Play (Animation) widget</h2>
+<p><strong>Play</strong>控件用来以一定的整数控制播放速度，滑块的值连接播放器。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">play = widgets.Play(</div><div class="line"><span class="comment">#     interval=10,</span></div><div class="line">    value=<span class="number">50</span>,</div><div class="line">    min=<span class="number">0</span>,</div><div class="line">    max=<span class="number">100</span>,</div><div class="line">    step=<span class="number">1</span>,</div><div class="line">    description=<span class="string">"Press play"</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div><div class="line">slider = widgets.IntSlider()</div><div class="line">widgets.jslink((play, <span class="string">'value'</span>), (slider, <span class="string">'value'</span>))</div><div class="line">widgets.HBox([play, slider])</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="数据采集date-picker"><a class="markdownIt-Anchor" href="#数据采集date-picker"></a> 数据采集Date picker</h2>
+<p>该控件只能在Chrome和IE Edge浏览器中运行，不支持作为HTML的数据输入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">widgets.DatePicker(</div><div class="line">    description=<span class="string">'Pick a Date'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>DatePicker</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="颜色采集器color-picker"><a class="markdownIt-Anchor" href="#颜色采集器color-picker"></a> 颜色采集器Color picker</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">widgets.ColorPicker(</div><div class="line">    concise=<span class="keyword">False</span>,</div><div class="line">    description=<span class="string">'Pick a color'</span>,</div><div class="line">    value=<span class="string">'blue'</span>,</div><div class="line">    disabled=<span class="keyword">False</span></div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>ColorPicker</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="控制器controller"><a class="markdownIt-Anchor" href="#控制器controller"></a> 控制器Controller</h2>
+<p><strong>Controller</strong>可以作为旅游控制输入设备</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">widgets.Controller(</div><div class="line">    index=<span class="number">0</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Controller</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h2 id="容器布局控件containerlayout-widgets"><a class="markdownIt-Anchor" href="#容器布局控件containerlayout-widgets"></a> 容器/布局控件Container/Layout widgets</h2>
+<p>这些控件用来控制其他控件，称为子控件，因此，每个控件都有个子属性<strong>children</strong></p>
+<h3 id="box"><a class="markdownIt-Anchor" href="#box"></a> Box</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">items = [widgets.Label(str(i)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>)]</div><div class="line">widgets.Box(items)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Box</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="横向型hbox"><a class="markdownIt-Anchor" href="#横向型hbox"></a> 横向型HBox</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">items = [widgets.Label(str(i)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>)]</div><div class="line">widgets.HBox(items)</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="纵向型vbox"><a class="markdownIt-Anchor" href="#纵向型vbox"></a> 纵向型VBox</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">items = [widgets.Label(str(i)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>)]</div><div class="line">left_box = widgets.VBox([items[<span class="number">0</span>], items[<span class="number">1</span>]])</div><div class="line">right_box = widgets.VBox([items[<span class="number">2</span>], items[<span class="number">3</span>]])</div><div class="line">widgets.HBox([left_box, right_box])</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>HBox</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="折叠型accordion"><a class="markdownIt-Anchor" href="#折叠型accordion"></a> 折叠型Accordion</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">accordion = widgets.Accordion(children=[widgets.IntSlider(), widgets.Text()])</div><div class="line">accordion.set_title(<span class="number">0</span>, <span class="string">'Slider'</span>)</div><div class="line">accordion.set_title(<span class="number">1</span>, <span class="string">'Text'</span>)</div><div class="line">accordion</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Accordion</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="标签型tabs"><a class="markdownIt-Anchor" href="#标签型tabs"></a> 标签型Tabs</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">tab_contents = [<span class="string">'P0'</span>, <span class="string">'P1'</span>, <span class="string">'P2'</span>, <span class="string">'P3'</span>, <span class="string">'P4'</span>]</div><div class="line">children = [widgets.Text(description=name) <span class="keyword">for</span> name <span class="keyword">in</span> tab_contents]</div><div class="line">tab = widgets.Tab()</div><div class="line">tab.children = children</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(children)):</div><div class="line">    tab.set_title(i, str(i))</div><div class="line">tab</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Tab</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+<h3 id="使用selected_index而非数值构建可折叠标签"><a class="markdownIt-Anchor" href="#使用selected_index而非数值构建可折叠标签"></a> 使用<strong>selected_index</strong>而非数值构建可折叠标签</h3>
+<p>当用户更新选择的内容时，<strong>Accordion</strong>和<strong>Tab</strong>能够更新<strong>selected_index</strong>，这也就意味着可以观察到用户正在做的内容，并以编程的方式通过设置<strong>selected_index</strong>的值实现用户所看到的内容。</p>
+<p><strong>selected_index = None</strong>能够关闭所有折叠选项或是标签。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tab.selected_index = <span class="number">3</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">accordion.selected_index = <span class="keyword">None</span></div></pre></td></tr></table></figure>
+<h3 id="嵌套标签和折叠内容nesting-tabs-and-accordions"><a class="markdownIt-Anchor" href="#嵌套标签和折叠内容nesting-tabs-and-accordions"></a> 嵌套标签和折叠内容Nesting tabs and accordions</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tab_nest = widgets.Tab()</div><div class="line">tab_nest.children = [accordion, accordion]</div><div class="line">tab_nest.set_title(<span class="number">0</span>, <span class="string">'An accordion'</span>)</div><div class="line">tab_nest.set_title(<span class="number">1</span>, <span class="string">'Copy of the accordion'</span>)</div><div class="line">tab_nest</div></pre></td></tr></table></figure>
+<p>Failed to display Jupyter Widget of type <code>Tab</code>.</p>
+<p>
+  If you're reading this message in the Jupyter Notebook or JupyterLab Notebook, it may mean
+  that the widgets JavaScript is still loading. If this message persists, it
+  likely means that the widgets JavaScript library is either not installed or
+  not enabled. See the <a href="https://ipywidgets.readthedocs.io/en/stable/user_install.html" target="_blank" rel="external">Jupyter
+  Widgets Documentation</a> for setup instructions.
+</p>
+<p>
+  If you're reading this message in another frontend (for example, a static
+  rendering on GitHub or <a href="https://nbviewer.jupyter.org/" target="_blank" rel="external">NBViewer</a>),
+  it may mean that your frontend doesn't currently support widgets.
+</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>大爷，赏个铜板啊~~~</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/weixin.png" alt="善良的右行 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Jupyter-Notebook/" rel="tag"># Jupyter Notebook</a>
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/21/JupyterNotebook_控件导论/" rel="next" title="JupyterNotebook_控件导论">
+                <i class="fa fa-chevron-left"></i> JupyterNotebook_控件导论
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?'];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/touxiang.png"
+               alt="善良的右行" />
+          <p class="site-author-name" itemprop="name">善良的右行</p>
+           
+              <p class="site-description motion-element" itemprop="description">奋斗在数据科学的海洋中~~~</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tcsds" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/1285456292" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数值型控件numeric-widgets"><span class="nav-number">1.</span> <span class="nav-text"> 数值型控件Numeric widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数型intslider"><span class="nav-number">1.1.</span> <span class="nav-text"> 整数型IntSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点型floatslider"><span class="nav-number">1.2.</span> <span class="nav-text"> 浮点型FloatSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数区间型intrangeslider"><span class="nav-number">1.3.</span> <span class="nav-text"> 整数区间型IntRangeSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数区间型intrangeslider"><span class="nav-number">1.4.</span> <span class="nav-text"> 浮点数区间型IntRangeSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数进度条intprogress"><span class="nav-number">1.5.</span> <span class="nav-text"> 整数进度条IntProgress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数进度条intprogress"><span class="nav-number">1.6.</span> <span class="nav-text"> 浮点数进度条IntProgress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有限整数型文本框boundedinttext"><span class="nav-number">1.7.</span> <span class="nav-text"> 有限整数型文本框BoundedIntText</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有限浮点数型文本框boundedfloattext"><span class="nav-number">1.8.</span> <span class="nav-text"> 有限浮点数型文本框BoundedFloatText</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数型文本框inttext"><span class="nav-number">1.9.</span> <span class="nav-text"> 整数型文本框IntText</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮点数型文本框floattext"><span class="nav-number">1.10.</span> <span class="nav-text"> 浮点数型文本框FloatText</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔控件boolean-widgets"><span class="nav-number">2.</span> <span class="nav-text"> 布尔控件Boolean widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开关按钮togglebutton"><span class="nav-number">2.1.</span> <span class="nav-text"> 开关按钮ToggleButton</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复选框checkbox"><span class="nav-number">2.2.</span> <span class="nav-text"> 复选框Checkbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只读型验证控件valid"><span class="nav-number">2.3.</span> <span class="nav-text"> 只读型验证控件Valid</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择型控件selection-widgets"><span class="nav-number">3.</span> <span class="nav-text"> 选择型控件Selection widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下拉框dropdown"><span class="nav-number">3.1.</span> <span class="nav-text"> 下拉框Dropdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标识性按钮radiobuttons"><span class="nav-number">3.2.</span> <span class="nav-text"> 标识性按钮RadioButtons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择性框架select"><span class="nav-number">3.3.</span> <span class="nav-text"> 选择性框架Select</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择型滑块selectionslider"><span class="nav-number">3.4.</span> <span class="nav-text"> 选择型滑块SelectionSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择范围型滑块selectionrangeslider"><span class="nav-number">3.5.</span> <span class="nav-text"> 选择范围型滑块SelectionRangeSlider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#触发器按钮togglebuttons"><span class="nav-number">3.6.</span> <span class="nav-text"> 触发器按钮ToggleButtons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多重可选控件"><span class="nav-number">3.7.</span> <span class="nav-text"> 多重可选控件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符控件string-widgets"><span class="nav-number">4.</span> <span class="nav-text"> 字符控件String widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文本型text"><span class="nav-number">4.1.</span> <span class="nav-text"> 文本型Text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本域型textarea"><span class="nav-number">4.2.</span> <span class="nav-text"> 文本域型Textarea</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签label"><span class="nav-number">4.3.</span> <span class="nav-text"> 标签Label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">4.4.</span> <span class="nav-text"> HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html-math"><span class="nav-number">4.5.</span> <span class="nav-text"> HTML Math</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片image"><span class="nav-number">5.</span> <span class="nav-text"> 图片Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按钮button"><span class="nav-number">6.</span> <span class="nav-text"> 按钮Button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出output"><span class="nav-number">7.</span> <span class="nav-text"> 输出Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#播放动画控件play-animation-widget"><span class="nav-number">8.</span> <span class="nav-text"> 播放（动画）控件Play (Animation) widget</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据采集date-picker"><span class="nav-number">9.</span> <span class="nav-text"> 数据采集Date picker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#颜色采集器color-picker"><span class="nav-number">10.</span> <span class="nav-text"> 颜色采集器Color picker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制器controller"><span class="nav-number">11.</span> <span class="nav-text"> 控制器Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器布局控件containerlayout-widgets"><span class="nav-number">12.</span> <span class="nav-text"> 容器/布局控件Container/Layout widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#box"><span class="nav-number">12.1.</span> <span class="nav-text"> Box</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#横向型hbox"><span class="nav-number">12.2.</span> <span class="nav-text"> 横向型HBox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纵向型vbox"><span class="nav-number">12.3.</span> <span class="nav-text"> 纵向型VBox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折叠型accordion"><span class="nav-number">12.4.</span> <span class="nav-text"> 折叠型Accordion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签型tabs"><span class="nav-number">12.5.</span> <span class="nav-text"> 标签型Tabs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用selected_index而非数值构建可折叠标签"><span class="nav-number">12.6.</span> <span class="nav-text"> 使用selected_index而非数值构建可折叠标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#嵌套标签和折叠内容nesting-tabs-and-accordions"><span class="nav-number">12.7.</span> <span class="nav-text"> 嵌套标签和折叠内容Nesting tabs and accordions</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">善良的右行</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://tcsds.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://tcsds.github.io/2018/02/21/JupyterNotebook_控件列表/';
+          this.page.identifier = '2018/02/21/JupyterNotebook_控件列表/';
+          this.page.title = 'JupyterNotebook_控件列表';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://tcsds.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("EYRPvu8Foi70qSt1y7OdXfQA-gzGzoHsz", "LtAiueqnI6ktPOyLVaXWPHR0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
